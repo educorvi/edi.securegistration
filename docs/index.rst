@@ -1,0 +1,5 @@
+====================
+edi.securegistration
+====================
+
+User documentation
