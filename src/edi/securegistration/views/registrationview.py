@@ -3,6 +3,21 @@
 from edi.securegistration import _
 from Products.Five.browser import BrowserView
 
+import datetime
+import random
+
+now = datetime.datetime.now()
+hour = now.strftime("%H")
+singlenumber  = random.randint(2,4)
+
+zahl1 = int(hour)
+zahl2 = int(hour) * singlenumber
+
+print("Bitte rechnen Sie "+str(zahl1)+" + "+str(zahl2)+" aus.")
+
+
+
+
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
@@ -15,3 +30,15 @@ class Registrationview(BrowserView):
         # Implement your own actions:
         self.msg = _(u'A small message')
         return self.index()
+        
+    def generate_captcha(self):     
+        now = datetime.datetime.now()
+        hour = now.strftime("%H")
+        singlenumber  = random.randint(2,4)
+
+        zahl1 = int(hour)
+        zahl2 = int(hour) * singlenumber
+
+        captchastring = str(zahl1)+" + "+str(zahl2)
+        return captchastring
+
