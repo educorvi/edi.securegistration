@@ -7,16 +7,9 @@ import datetime
 import random
 
 now = datetime.datetime.now()
-hour = now.strftime("%H")
-singlenumber  = random.randint(2,4)
 
 zahl1 = int(hour)
 zahl2 = int(hour) * singlenumber
-
-print("Bitte rechnen Sie "+str(zahl1)+" + "+str(zahl2)+" aus.")
-
-
-
 
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
