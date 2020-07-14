@@ -7,6 +7,8 @@ import datetime
 import random
 
 now = datetime.datetime.now()
+hour = now.strftime("%H")
+singlenumber  = random.randint(2,4)
 
 zahl1 = int(hour)
 zahl2 = int(hour) * singlenumber
