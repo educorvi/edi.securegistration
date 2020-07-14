@@ -23,20 +23,23 @@
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
         <form action="" tal:attributes="action view/actionurl">
-        i <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+          <div class="form-group">
+            <label for="exampleInputEmail1">E-Mail-Adresse</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">email with anyone else.</small>
+              <!-- <small id="emailHelp" class="form-text text-muted">email with anyone else.</small> -->
           </div>
           <div class="form-group">
-              <label for="Captcha" tal:content="view/captchastring">Bitte schreibren...</label>
-               <input type="number" class="form-control" id="captcha">
+              <label for="Captcha" tal:content="view/captchastring"></label>
+                <input type="number" class="form-control" id="captcha">
+                <small id="emailHelp" class="form-text text-muted">Bitte lösen Sie zur Sicherheit diese Rechenaufgabe.</small>
           </div>
           <div class="form-group form-check">
+    <!--
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    -->
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Weiter</button>
 </form>
 
 
