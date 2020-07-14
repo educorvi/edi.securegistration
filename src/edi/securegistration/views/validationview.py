@@ -7,6 +7,7 @@ import random
 
 class Validationview(BrowserView):
     def __call__(self):
+        import pdb; pdb.set_trace()
         template = '''<li class="heading" i18n:translate="">
           Sample View
         </li>'''
