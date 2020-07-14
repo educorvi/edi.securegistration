@@ -29,6 +29,8 @@ class Registrationview(BrowserView):
     def __call__(self):
         # Implement your own actions:
         self.msg = _(u'A small message')
+        self.captchastring = self.generate_captcha()
+        self.actionurl = self.context.absolute_url() + '/validationview'
         return self.index()
         
     def generate_captcha(self):     
